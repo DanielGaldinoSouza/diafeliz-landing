@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dia Feliz — Igreja Livres</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +15,15 @@
   a { color: #1E9AAF; }
   a:hover { color: #14788a; }
   @keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-9px) } }
+
+  @media (max-width: 640px) {
+    .hero-text { text-align: center; align-items: center; }
+    .hero-badge { align-self: center !important; }
+    .hero-ctas { flex-wrap: nowrap !important; gap: 8px !important; justify-content: center; width: 100%; }
+    .hero-ctas a { flex: 1 1 0; padding: 13px 12px !important; font-size: 15px !important; }
+    .rolar-list { flex-direction: column; }
+    .rolar-list > div { width: 100%; justify-content: center; box-sizing: border-box; padding: 14px 0px; }
+  }
 
   /* ===== EDITE OS TEXTOS DO EVENTO AQUI ===== */
   /* Link do formulário de inscrição e chave Pix: procure "CONFIGURAÇÕES" no final deste arquivo. */
@@ -29,8 +40,8 @@
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center">
 
-      <div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
-        <div style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; background: #ffffff; border-radius: 999px; padding: 8px 18px; font-weight: 800; font-size: 14px; color: #1E9AAF; box-shadow: 0 6px 16px rgba(52,120,150,.18)">
+      <div class="hero-text" style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+        <div class="hero-badge" style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; background: #ffffff; border-radius: 999px; padding: 8px 18px; font-weight: 800; font-size: 14px; color: #1E9AAF; box-shadow: 0 6px 16px rgba(52,120,150,.18)">
           <span style="width: 9px; height: 9px; border-radius: 50%; background: #EF7063; display: inline-block"></span>
           10 DE OUTUBRO · SÁBADO
         </div>
@@ -51,11 +62,11 @@
           "Pois o Filho do Homem veio buscar e salvar o que estava perdido." — Lucas 19:10
         </p>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px">
-          <a id="hero-form-link" href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #F2B230; color: #4a2f22; text-decoration: none; font-family: 'Baloo 2', Nunito, sans-serif; font-weight: 800; font-size: 19px; padding: 16px 30px; border-radius: 999px; box-shadow: 0 8px 0 #cf9420; min-height: 44px">
+        <div class="hero-ctas" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px">
+          <a id="hero-form-link" href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #F2B230; color: #4a2f22; text-decoration: none; font-family: 'Baloo 2', Nunito, sans-serif; font-weight: 800; font-size: 19px; padding: 16px 30px; border-radius: 999px; box-shadow: 0 8px 0 #cf9420; min-height: 44px">
             Fazer inscrição
           </a>
-          <a href="#oferta" style="display: inline-flex; align-items: center; gap: 10px; background: #ffffff; color: #1E9AAF; text-decoration: none; font-family: 'Baloo 2', Nunito, sans-serif; font-weight: 800; font-size: 19px; padding: 16px 30px; border-radius: 999px; box-shadow: 0 8px 0 rgba(30,154,175,.25); min-height: 44px">
+          <a href="#oferta" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #ffffff; color: #1E9AAF; text-decoration: none; font-family: 'Baloo 2', Nunito, sans-serif; font-weight: 800; font-size: 19px; padding: 16px 30px; border-radius: 999px; box-shadow: 0 8px 0 rgba(30,154,175,.25); min-height: 44px">
             Ofertar via Pix
           </a>
         </div>
@@ -100,7 +111,7 @@
 
 <section style="max-width: 1120px; margin: 0 auto; padding: 46px 20px 10px">
   <h2 style="font-family: 'Baloo 2', Nunito, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 40px); margin: 0 0 20px; color: #5A3A2E">O que vai rolar</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 14px">
+  <div class="rolar-list" style="display: flex; flex-wrap: wrap; gap: 14px">
     <div style="display: flex; align-items: center; gap: 10px; background: #A98FD0; color: #ffffff; border-radius: 999px; padding: 14px 24px; font-weight: 800; font-size: 17px; box-shadow: 0 8px 0 rgba(90,58,46,.14)">Ministração teatral</div>
     <div style="display: flex; align-items: center; gap: 10px; background: #8FC74A; color: #ffffff; border-radius: 999px; padding: 14px 24px; font-weight: 800; font-size: 17px; box-shadow: 0 8px 0 rgba(90,58,46,.14)">Música</div>
     <div style="display: flex; align-items: center; gap: 10px; background: #F2B230; color: #ffffff; border-radius: 999px; padding: 14px 24px; font-weight: 800; font-size: 17px; box-shadow: 0 8px 0 rgba(90,58,46,.14)">Brincadeiras</div>
